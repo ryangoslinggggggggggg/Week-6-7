@@ -1,25 +1,31 @@
-# SnoopySnacks API — Sprint 1 Increment
 
-Node.js + Express backend with Node built-in SQLite (needs Node 22.13 or newer).
+# SnoopySnack
 
-## Run
-```bash
-npm install
-npm start        # http://localhost:3000
-npm test
-```
+A food-ordering website for snacks, pizza, donuts, and drinks.
 
-## Endpoint
-`GET /api/snacks` — returns all snacks from the `snacks` table.
-Optional query params: `?category=Pizza`, `?available=true`
+## Release Version
 
-Example response:
-```json
-{ "count": 24, "data": [ { "id": 1, "name": "Snoopy Cookie", "category": "Cookies", "description": "...", "price": 20, "available": true } ] }
-```
+**Current Version: v1.0.0**
 
-## Structure
-- `server.js` — starts the server
-- `src/db.js` — creates the `snacks` table and seeds initial records
-- `src/app.js` — Express app and routes
-- `test/api.test.js` — API tests
+This release includes the initial website layout, login and signup interface, food categories, product search, shopping cart, quantity controls, and demo checkout.
+
+## Versioning (Semantic Versioning)
+
+SnoopySnack follows Semantic Versioning (MAJOR.MINOR.PATCH).
+
+- MAJOR: Incompatible changes that require significant updates.
+- MINOR: New features that remain compatible with existing functionality.
+- PATCH: Bug fixes and small corrections.
+
+Example: v1.0.1 represents a patch release that fixes bugs without introducing major new features.
+
+## Documentation
+
+- Software Maintenance Plan: `SnoopySnack_Software_Maintenance_Plan.pdf`
+- Disaster Recovery Plan: `SnoopySnack_Disaster_Recovery_Plan.pdf`
+
+## Technologies Used
+
+- HTML
+- CSS
+- GitHub
