@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnoopySnack | Your Happy Food Place</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LOGIN AND SIGNUP -->
+    <section id="auth-screen" class="auth-screen">
+        <div class="auth-card">
+            <div class="auth-brand">
+                <img
+                    src="https://img.icons8.com/doodle/48/snoopy.png"
+                    alt="Snoopy"
+                    class="snoopy-icon"
+                >
+                <span>SnoopySnack</span>
+            </div>
+
+            <div class="auth-heading">
+                <p class="eyebrow">A LITTLE TREAT FOR YOU</p>
+                <h1>Welcome back!</h1>
+                <p>Good food makes everything better.</p>
+            </div>
+
+            <form id="login-form">
+                <label for="login-username">Username</label>
+                <input
+                    type="text"
+                    id="login-username"
+                    name="username"
+                    placeholder="Enter your username"
+                    required
+                >
+
+                <label for="login-password">Password</label>
+                <div class="password-wrapper">
+                    <input
+                        type="password"
+                        id="login-password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        data-target="login-password"
+                    >Show</button>
+                </div>
+
+                <p id="login-message" class="form-message"></p>
+
+                <button type="submit" class="primary-button">
+                    Log In
+                </button>
+            </form>
+
+            <p class="auth-switch">
+                Don't have an account?
+                <button type="button" id="show-signup" class="text-button">
+                    Sign up
+                </button>
+            </p>
+
+            <form id="signup-form" class="hidden">
+                <h2>Create an account</h2>
+
+                <label for="signup-username">Username</label>
+                <input
+                    type="text"
+                    id="signup-username"
+                    name="username"
+                    placeholder="Choose a username"
+                    required
+                >
+
+                <label for="signup-password">Password</label>
+                <div class="password-wrapper">
+                    <input
+                        type="password"
+                        id="signup-password"
+                        name="password"
+                        placeholder="Create a password"
+                        required
+                    >
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        data-target="signup-password"
+                    >Show</button>
+                </div>
+
+                <p id="signup-message" class="form-message"></p>
+
+                <button type="submit" class="primary-button">
+                    Create Account
+                </button>
+
+                <p class="auth-switch">
+                    Already have an account?
+                    <button type="button" id="show-login" class="text-button">
+                        Log in
+                    </button>
+                </p>
+            </form>
+
+            <div class="auth-decoration">♡ Made with love and snacks ♡</div>
+        </div>
+    </section>
+
+    <!-- MAIN STORE -->
+    <section id="app-screen" class="hidden">
+
+        <!-- NAVIGATION -->
+        <header class="site-header">
+            <a href="#home" class="logo">
+                <img
+                    src="https://img.icons8.com/doodle/48/snoopy.png"
+                    alt="Snoopy"
+                    class="snoopy-icon"
+                >
+                <span>SnoopySnack</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="#home">Home</a>
+                <a href="#categories">Categories</a>
+                <a href="#menu">Our Menu</a>
+                <a href="#cart">My Cart</a>
+            </nav>
+
+            <button id="logout-button" class="outline-button">
+                Log Out
+            </button>
+        </header>
+
+        <main>
+            <!-- HERO -->
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <p class="eyebrow">WELCOME TO YOUR HAPPY PLACE</p>
+
+                    <h1 id="welcome-title">
+                        Good food, happy mood!
+                    </h1>
+
+                    <p id="welcome-description">
+                        Your favorite snacks, sweet treats, and drinks
+                        are just a few clicks away.
+                    </p>
+
+                    <a href="#menu" class="primary-button hero-button">
+                        Order Something Yummy
+                    </a>
+
+                    <div class="hero-note">
+                        <span>♡</span>
+                        Little treats, big happiness.
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="hero-image-circle">
+                        <img
+                            src="https://img.icons8.com/doodle/48/snoopy.png"
+                            alt="Snoopy"
+                            class="hero-snoopy"
+                        >
+                    </div>
+                    <span class="floating-heart heart-one">♡</span>
+                    <span class="floating-heart heart-two">♥</span>
+                    <span class="floating-star">✦</span>
+                </div>
+            </section>
+
+            <!-- CATEGORIES -->
+            <section id="categories" class="section">
+                <div class="section-heading">
+                    <p class="eyebrow">FIND YOUR FAVORITE</p>
+                    <h2>What are you craving?</h2>
+                    <p>Something sweet, savory, or refreshing?</p>
+                </div>
+
+                <div class="category-grid">
+                    <button class="category-card" data-category="All">
+                        <span class="category-emoji">🍽️</span>
+                        <span>All Items</span>
+                    </button>
+
+                    <button class="category-card" data-category="Cookies">
+                        <span class="category-emoji">🍪</span>
+                        <span>Cookies</span>
+                    </button>
+
+                    <button class="category-card" data-category="Ice Cream">
+                        <span class="category-emoji">🍦</span>
+                        <span>Ice Cream</span>
+                    </button>
+
+                    <button class="category-card" data-category="Pizza">
+                        <span class="category-emoji">🍕</span>
+                        <span>Pizza</span>
+                    </button>
+
+                    <button class="category-card" data-category="Burgers">
+                        <span class="category-emoji">🍔</span>
+                        <span>Burgers</span>
+                    </button>
+
+                    <button class="category-card" data-category="Donuts">
+                        <span class="category-emoji">🍩</span>
+                        <span>Donuts</span>
+                    </button>
+
+                    <button class="category-card" data-category="Drinks">
+                        <span class="category-emoji">🥤</span>
+                        <span>Drinks</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- MENU -->
+            <section id="menu" class="section menu-section">
+                <div class="section-heading">
+                    <p class="eyebrow">MADE FOR YOUR CRAVINGS</p>
+                    <h2>Our yummy menu</h2>
+                    <p>Pick your favorites and treat yourself!</p>
+                </div>
+
+                <div class="menu-toolbar">
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Search your favorite food..."
+                        aria-label="Search menu"
+                    >
+                </div>
+
+                <div class="category-filters">
+                    <button class="filter-button active" data-category="All">All</button>
+                    <button class="filter-button" data-category="Cookies">Cookies</button>
+                    <button class="filter-button" data-category="Ice Cream">Ice Cream</button>
+                    <button class="filter-button" data-category="Pizza">Pizza</button>
+                    <button class="filter-button" data-category="Burgers">Burgers</button>
+                    <button class="filter-button" data-category="Donuts">Donuts</button>
+                    <button class="filter-button" data-category="Drinks">Drinks</button>
+                </div>
+
+                <!-- Products are loaded from /api/snacks by script.js -->
+                <div id="product-grid" class="product-grid"></div>
+            </section>
+
+            <!-- SHOPPING CART -->
+            <section id="cart" class="section cart-section">
+                <div class="section-heading">
+                    <p class="eyebrow">YOUR LITTLE FOOD HAUL</p>
+                    <h2>Your shopping cart 🩷</h2>
+                    <p>Everything you love, all in one place.</p>
+                </div>
+
+                <div class="cart-card">
+                    <div class="cart-header">
+                        <h3>Your Items</h3>
+                        <span class="cart-count">
+                            <span id="cart-count">0</span> items
+                        </span>
+                    </div>
+
+                    <div id="cart-items" class="cart-items">
+                        <p class="empty-cart">
+                            Your cart is waiting for something yummy! ♡
+                        </p>
+                    </div>
+
+                    <div class="cart-summary">
+                        <span>Total</span>
+                        <strong id="cart-total">₱0.00</strong>
+                    </div>
+
+                    <button id="checkout-button" class="primary-button checkout-button">
+                        Proceed to Checkout
+                    </button>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="site-footer">
+                <div class="footer-brand">
+                    <img
+                        src="https://img.icons8.com/doodle/48/snoopy.png"
+                        alt="Snoopy"
+                        class="snoopy-icon"
+                    >
+                    <span>SnoopySnack</span>
+                </div>
+
+                <p>Good food, happy mood. Made with ♡.</p>
+                <p class="copyright">
+                    © 2026 SnoopySnack. All rights reserved.
+                </p>
+            </footer>
+        </main>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
